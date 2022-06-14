@@ -1,6 +1,6 @@
 const mongoose = require('../../src/database');
 
-const frmDadosHospSchema = new mongoose.Schema({
+const frmIntercorrenciaSchema = new mongoose.Schema({
     sintCpre: {
         type: Boolean,
         require: true,
@@ -80,6 +80,6 @@ const frmDadosHospSchema = new mongoose.Schema({
     },
 });
 
-const frmDadosHosp = mongoose.model('frmDadosHosp', frmDadosHospSchema);
+const FrmIntercorrencia = mongoose.model('frmIntercorrencia', frmIntercorrenciaSchema);
 
-module.exports = frmDadosHosp;
+module.exports = FrmIntercorrencia;
