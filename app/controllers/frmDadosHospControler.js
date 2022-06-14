@@ -9,10 +9,11 @@ router.use(authMiddleware);
 
 router.get('/:frmDadosHospId', async (req, res)=>{
     try{
-        const frmDadosHosp = await FrmDadosHosp.findById(req.params.frmDadosHospId).populate('user');
+        const frmDadosHosp = await FrmDadosHosp.findById(req.params.frmDadosHospId).populate('patient');
         return res.send ({ frmDadosHosp });
 
     }catch(err){
+        console.log(err)
         return res.status(400).send({ error: 'Error loading form Dados Hospitalares'});
     }
     
@@ -22,10 +23,10 @@ router.post('/', async (req, res)=>{
    try{
     const { cpre, dtcpre, bariatrica, medContinuo, medContinuoDesc, alcoolismo, alcoolismofreq, fumante, qtdCigarros, tpFumante, doencaPre,  qualDoencaPre,  calculoBiliar } = req.body;
 
-    const frmDadosHosp = await FrmDadosHosp.create({ cpre, dtcpre, bariatrica, medContinuo, medContinuoDesc, alcoolismo, alcoolismofreq, fumante, qtdCigarros, tpFumante, doencaPre,  qualDoencaPre,  calculoBiliar, user: req.userId }); 
+    const frmDadosHosp = await FrmDadosHosp.create({ cpre, dtcpre, bariatrica, medContinuo, medContinuoDesc, alcoolismo, alcoolismofreq, fumante, qtdCigarros, tpFumante, doencaPre,  qualDoencaPre,  calculoBiliar, patient: req.userId }); 
 
     return res.send({ frmDadosHosp })
-
+    
    }catch (err){
     console.log(err)
         return res.status(400).send({ error: 'Error creating new form Dados Hospitalares'});

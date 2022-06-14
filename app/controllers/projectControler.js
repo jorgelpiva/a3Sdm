@@ -34,7 +34,7 @@ router.post('/', async (req, res)=>{
     const { title, description } = req.body;
 
     const project = await Project.create({ title, description, user: req.userId }); 
-
+    console.log(req.userId)
     return res.send({ project })
 
    }catch (err){
