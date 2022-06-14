@@ -8,49 +8,71 @@ const frmDadosHospSchema = new mongoose.Schema({
     enjooVomit: {
         type: Boolean,
     },
-    bariatrica: {
+    dorEstomago: {
         type: Boolean,
-        require: true,
     },
-    medContinuo: {
+    malEstar: {
         type: Boolean,
-        require: true,
     },
-    medContinuoDesc: {
+    suores: {
+        type: Boolean,
+    },
+    outros: {
+        type: Boolean,
+    },
+    outrosDesc: {
         type: String,
     },
-    alcoolismo: {
+    dorAbdomenEsq: {
+        type: Boolean,
+    },
+    dorAbdomenDir: {
+        type: Boolean,
+    },
+    dorAbdomen: {
+        type: Boolean,
+    },
+    sintomaPersiste: {
         type: Boolean,
         require: true,
     },
-    alcoolismofreq: {
+    qualSintoma: {
         type: String,
     },
-    fumante: {
+    novoSintoma: {
         type: Boolean,
         require: true,
     },
-    qtdCigarros: {
-        type: Number,
-    },
-    tpFumante: {
-        type: Number,
-    },
-    doencaPre: {
-        type: Boolean,
-        require: true,
-    },
-    qualDoencaPre: {
+    qualNovoSintoma: {
         type: String,
     },
-    calculoBiliar: {
+    reposoDoisDias: {
         type: Boolean,
         require: true,
+    },
+    complicacaoPosCirurgico: {
+        type: Boolean,
+        require: true,
+    },
+    inflamacao: {
+        type: Boolean,
+    },
+    hemorragia: {
+        type: Boolean,
+    },
+    infeccao: {
+        type: Boolean,
+    },
+    outras: {
+        type: Boolean,
     },
     patient: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         require: true
+    },
+    observacao: {
+        type: String,
     },
     createdAt:{
         type: Date,
