@@ -1,6 +1,9 @@
 const mongoose = require('../../src/database');
 
 const frmProcedimentoSchema = new mongoose.Schema({
+    numeroProtocolo: {
+        type: Number,
+    },
     nomeHospital: {
         type: String,
     },

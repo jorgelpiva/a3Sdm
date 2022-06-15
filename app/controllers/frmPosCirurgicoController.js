@@ -44,7 +44,7 @@ router.put('/:frmPosCirurgicoId', async (req, res)=>{
                 sangue  : sangue, 
                 image   : image, 
                 outros : outros, 
-                observ : observ,                
+                observ : observ               
             }
         });
         return res.send ();

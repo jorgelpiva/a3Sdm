@@ -1,6 +1,6 @@
 const mongoose = require('../../src/database');
 
-const frmDadosHospSchema = new mongoose.Schema({
+const frmPreCirurgicoSchema = new mongoose.Schema({
     
     acompPre: {
         type: Boolean,
@@ -30,7 +30,7 @@ const frmDadosHospSchema = new mongoose.Schema({
     },
 
     resultAnt:{
-        type:File,
+        type: Object,
     },
 
     patient: {
@@ -44,6 +44,6 @@ const frmDadosHospSchema = new mongoose.Schema({
     }
 });
 
-const frmDadosHosp = mongoose.model('frmDadosHosp', frmDadosHospSchema);
+const FrmPreCirurgico = mongoose.model('frmPreCirurgico', frmPreCirurgicoSchema);
 
-module.exports = frmDadosHosp;
+module.exports = FrmPreCirurgico;

@@ -7,14 +7,12 @@ const router = express.Router();
 
 router.use(authMiddleware);
 
-
 router.get('/:frmPreCirurgicoId', async (req, res)=>{
-    try{
+    try {
         const frmPreCirurgico = await FrmPreCirurgico.findById(req.params.frmPreCirurgicoId).populate('patient');
         return res.send ({ frmPreCirurgico });
 
     }catch(err){
-        console.log(err)
         return res.status(400).send({ error: 'Error loading form Pre Cirurgico'});
     }
     
@@ -63,7 +61,7 @@ router.delete('/:frmPreCirurgicoId', async (req, res)=>{
         return res.send ();
 
     }catch(err){
-        console.log(err)
+
         return res.status(400).send({ error: "We can't form Pre Cirurgico"});
     }
     

@@ -62,7 +62,6 @@ router.delete('/:frmFeedbackId', async (req, res)=>{
         return res.send ();
 
     }catch(err){
-        console.log(err)
         return res.status(400).send({ error: "We can't form Feedback"});
     }
     
