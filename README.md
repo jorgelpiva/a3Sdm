@@ -5,11 +5,16 @@ Este projeto é um trabalho dos alunos da Unidade Curricular de  Sistemas distri
 Integrantes do Grupo:
 
 
-Douglas da Silva Oliveira  - 322131950
-Larissa Martins de Souza Sampaio - 322112784
-Jorge Leandro Piva - 820268722
-Matheus Felipe de Assis Avelar Silva - 322115597
-Mateus Gomes Veloso – 322116316
+Douglas da Silva Oliveira  - 322131950 
+
+Larissa Martins de Souza Sampaio - 322112784 
+
+Jorge Leandro Piva - 820268722 
+
+Matheus Felipe de Assis Avelar Silva - 322115597 
+
+Mateus Gomes Veloso – 322116316 
+
 Matheus Mauricio Rodrigues da Silva - 52124299
 
 Esta é uma API BACKEND 100% BackEnd, foi desenvolvida uma interface para ela como protótipo mas não houve tempo hábil para a integração, tanto a aplicação FrontEnd como a Backend estão finalizadas faltando apenas a integração, criação das funções e das requisições que irão ser enviadas ao BackEnd e o tratamento e visualização em tela do retorno no frontend.
